@@ -17,9 +17,10 @@
         "matchDatasources": ["go"],
         "matchUpdateTypes": ["patch", "minor", "major"],
         "enabled": true,
-        "groupName": "security-updates",
         "labels": ["security"],
-        "onlyVulnerabilities": true
+        "vulnerabilityAlerts": {
+          "enabled": true
+        }
       }
     ]
   }
