@@ -1,26 +1,42 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:base"],
-    "vulnerabilityAlerts": {
-      "enabled": true,
-      "labels": ["security"],
-      "assignees": ["gitsofaryan"]
-    },
-    "dependencyDashboard": true,
-    "dependencyDashboardTitle": "Dependency Dashboard",
-    "packageRules": [
-      {
-        "matchDatasources": ["go"],
-        "enabled": false
-      },
-      {
-        "matchDatasources": ["go"],
-        "matchUpdateTypes": ["patch", "minor", "major"],
-        "enabled": true,
-        "labels": ["security"],
-        "vulnerabilityAlerts": {
-          "enabled": true
-        }
-      }
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": [
+      "security"
+    ],
+    "assignees": [
+      "gitsofaryan"
     ]
-  }
+  },
+  "dependencyDashboard": true,
+  "dependencyDashboardTitle": "Dependency Dashboard",
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "go"
+      ],
+      "enabled": false
+    },
+    {
+      "matchDatasources": [
+        "go"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "major"
+      ],
+      "enabled": true,
+      "labels": [
+        "security"
+      ],
+      "vulnerabilityAlerts": {
+        "enabled": true
+      }
+    }
+  ]
+}
